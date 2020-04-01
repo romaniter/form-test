@@ -1936,7 +1936,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -37341,9 +37340,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-4" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-4" }, [
+      _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header h3" }, [_vm._v("Заявка")]),
           _vm._v(" "),
@@ -37422,14 +37419,17 @@ var render = function() {
                 ? _c(
                     "a",
                     {
-                      staticClass: "btn btn-primary",
+                      staticClass: "btn btn-outline-success",
                       on: { click: _vm.submit }
                     },
                     [_vm._v("Отправить")]
                   )
                 : _c(
                     "a",
-                    { staticClass: "btn btn-primary", attrs: { disabled: "" } },
+                    {
+                      staticClass: "btn btn-outline-success disabled",
+                      attrs: { disabled: "" }
+                    },
                     [_vm._v("Отправить")]
                   )
             ])

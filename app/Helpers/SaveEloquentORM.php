@@ -7,9 +7,11 @@ use App\Order;
 
 class SaveEloquentORM implements FormInterface {
 
+    //Реализация фабричного метода - отправка данных в БД
+
     public static function save(Request $request, Order $Order) {
 
-        $Order->orders()->create([
+        $Order::create([
             'name' => $request->name,
             'phone' => $request->phone,
             'message' => $request->message

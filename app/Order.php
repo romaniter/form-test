@@ -6,7 +6,4 @@ class Order extends Model {
 
     protected $fillable = ['name','phone','message'];
 
-    function orders() {
-        return $this;
-    }
 }

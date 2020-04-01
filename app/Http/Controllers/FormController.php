@@ -10,12 +10,15 @@ class FormController extends Controller
 {
     public function val(Request $request, FormInterface $FormInterface, Order $Order)
     {
+        //Валидация данных из формы и передача в фабрику
         $this->validate($request, [
             'name' => 'required|max:64',
             'phone' => 'required|max:16',
             'message' => 'required',
         ]);
         $FormInterface->save($request, $Order);
-        return $request;
+        //Вернем ответ
+        $msg = "Ваша заявка успешно отправлена!";
+        return $msg;
     }
 }
